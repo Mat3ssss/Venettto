@@ -21,14 +21,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Venetto Burger – Nový Bydžov",
-  description: "Venetto Burger – nejlepší burgery v Novém Bydžově. Rozvoz po Novém Bydžově a okolí. Objednávky na tel. 731 041 616.",
-  keywords: ["burger", "Nový Bydžov", "Venetto", "rozvoz", "hamburgery"],
+  icons: { icon: "/vntlogo2.png" },
+  title: "Pizza Venetto – Městec Králové",
+  description: "Pizza Venetto – pizza a burgery v Městci Králové. Rozvoz po Městci Králové a okolí. Objednávky na tel. 731 041 616.",
+  keywords: ["pizza", "burger", "Městec Králové", "Venetto", "rozvoz", "hamburgery"],
   openGraph: {
-    title: "Venetto Burger – Nový Bydžov",
-    description: "Nejlepší burgery v Novém Bydžově s rozvozen po Novém Bydžově a okolí. Objednávky: 731 041 616.",
+    title: "Pizza Venetto – Městec Králové",
+    description: "Pizza a burgery v Městci Králové s rozvozen po okolí. Objednávky: 731 041 616.",
     url: "https://venettoburger.cz",
-    siteName: "Venetto Burger",
+    siteName: "Pizza Venetto",
     locale: "cs_CZ",
     type: "website",
     images: [
@@ -36,14 +37,14 @@ export const metadata: Metadata = {
         url: "https://venettoburger.cz/hotpicture.png",
         width: 1200,
         height: 630,
-        alt: "Venetto Burger Nový Bydžov",
+        alt: "Pizza Venetto Městec Králové",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Venetto Burger – Nový Bydžov",
-    description: "Nejlepší burgery v Novém Bydžově s rozvozen po Novém Bydžově a okolí.",
+    title: "Pizza Venetto – Městec Králové",
+    description: "Pizza a burgery v Městci Králové s rozvozen po okolí.",
     images: ["https://venettoburger.cz/hotpicture.png"],
   },
   metadataBase: new URL("https://venettoburger.cz"),

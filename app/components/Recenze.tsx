@@ -85,7 +85,7 @@ export default function Recenze() {
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src="/caramara.svg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none" />
-                    <p className="relative text-white text-sm md:text-lg leading-snug max-w-2xl z-10">
+                    <p className="relative text-white text-base md:text-lg leading-snug max-w-2xl z-10">
                       &ldquo;{review.text}&rdquo;
                     </p>
                   </motion.div>
