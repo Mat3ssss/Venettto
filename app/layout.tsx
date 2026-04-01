@@ -22,11 +22,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Venetto Burger – Nový Bydžov",
-  description: "Venetto Burger – nejlepší burgery v Novém Bydžově. Rozvoz po Novém Bydžově a okolí. Objednávky na tel. 607 741 803.",
+  description: "Venetto Burger – nejlepší burgery v Novém Bydžově. Rozvoz po Novém Bydžově a okolí. Objednávky na tel. 731 041 616.",
   keywords: ["burger", "Nový Bydžov", "Venetto", "rozvoz", "hamburgery"],
   openGraph: {
     title: "Venetto Burger – Nový Bydžov",
-    description: "Nejlepší burgery v Novém Bydžově s rozvozen po Novém Bydžově a okolí. Objednávky: 607 741 803.",
+    description: "Nejlepší burgery v Novém Bydžově s rozvozen po Novém Bydžově a okolí. Objednávky: 731 041 616.",
     url: "https://venettoburger.cz",
     siteName: "Venetto Burger",
     locale: "cs_CZ",

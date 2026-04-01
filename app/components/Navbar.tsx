@@ -44,7 +44,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full px-8 py-5 flex items-center justify-between border-b border-white/10 bg-black/80 backdrop-blur-md">
-      <Image src="/logo.png" alt="Venetto Burger" width={80} height={80} priority />
+      <Image src="/vntlogo2.png" alt="Venetto Burger" width={80} height={80} priority />
 
       {/* Desktop nav */}
       <nav className="hidden md:flex gap-10 items-center">

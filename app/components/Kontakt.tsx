@@ -1,12 +1,12 @@
 import FadeIn from "./FadeIn";
 
 const hodiny = [
-  { den: "Pondělí", cas: "zavřeno" },
-  { den: "Úterý", cas: "11:00 – 20:00" },
-  { den: "Středa", cas: "11:00 – 20:00" },
-  { den: "Čtvrtek", cas: "11:00 – 20:00" },
-  { den: "Pátek", cas: "11:00 – 21:00" },
-  { den: "Sobota", cas: "11:00 – 21:00" },
+  { den: "Pondělí", cas: "10:30 – 20:00" },
+  { den: "Úterý", cas: "10:30 – 20:00" },
+  { den: "Středa", cas: "10:30 – 20:00" },
+  { den: "Čtvrtek", cas: "10:30 – 20:00" },
+  { den: "Pátek", cas: "10:30 – 20:00" },
+  { den: "Sobota", cas: "11:00 – 20:00" },
   { den: "Neděle", cas: "12:00 – 20:00" },
 ];
 
@@ -15,9 +15,9 @@ export default function Kontakt() {
     <section id="kontakt" className="scroll-mt-24 bg-white pt-16 pb-10 px-8 overflow-hidden relative" aria-label="Kontakt a otevírací doba">
 
       {/* Zámek — absolutně vpravo dole */}
-      <FadeIn direction="right" className="absolute bottom-0 right-0 w-[55%] pointer-events-none select-none">
+      <FadeIn direction="right" className="absolute bottom-0 right-0 w-[35%] pointer-events-none select-none">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/bydzovzamek.svg" alt="" aria-hidden="true" className="w-full object-contain opacity-[0.06] translate-y-16 invert" />
+        <img src="/mkkostel.svg" alt="" aria-hidden="true" className="w-full object-contain opacity-[0.12] translate-y-16" />
       </FadeIn>
 
       <div className="max-w-6xl mx-auto relative z-10">
@@ -49,14 +49,14 @@ export default function Kontakt() {
           <FadeIn direction="up" className="flex-1">
             <h2 className="font-black uppercase text-lg tracking-widest mb-6 text-black">Adresa</h2>
             <p className="text-black/70 text-sm leading-relaxed">
-              Dukelská třída 1127<br />
-              Nový Bydžov<br />
-              504 01
+              T. G. Masaryka 177<br />
+              Městec Králové<br />
+              289 03
             </p>
             <div className="mt-6">
               <p className="text-black/50 text-xs uppercase tracking-widest mb-1">objednávky na tel.:</p>
-              <a href="tel:+420607741803" className="font-black text-xl text-black hover:text-black/60 transition-colors">
-                607 741 803
+              <a href="tel:+420731041616" className="font-black text-xl text-black hover:text-black/60 transition-colors">
+                731 041 616
               </a>
             </div>
           </FadeIn>

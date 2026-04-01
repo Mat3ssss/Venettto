@@ -30,7 +30,7 @@ export default function Rozvoz() {
         />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/rozvoz.svg" alt="Rozvoz" className="max-h-36 w-auto relative z-10" />
-        <p className="text-black font-black text-4xl tracking-tight relative z-10">607 741 803</p>
+        <p className="text-black font-black text-4xl tracking-tight relative z-10">731 041 616</p>
         <div className="flex flex-col sm:flex-row gap-10 relative z-10">
           <div>
             <p className="text-black font-black uppercase text-sm tracking-widest">Městec Králové</p>
@@ -46,7 +46,7 @@ export default function Rozvoz() {
       {/* Right — map slides from right */}
       <div className="flex-1 min-h-[280px] relative">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2551.7026527141247!2d15.492245200000003!3d50.2414597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c2188859b8227%3A0x61cff8ac82475312!2sVenetto%20Burger!5e0!3m2!1sen!2scz!4v1774102330536!5m2!1sen!2scz"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NIWI3Tv9iDPrlnowr_0ZqZWoAQydKJU&q=Pizza%20Venetto%20M%C4%9Bstec%20kr%C3%A1lov%C3%A9%2C%20Tom%C3%A1%C5%A1e%20Garrigue%20Masaryka%2C%20M%C4%9Bstec%20kr%C3%A1lov%C3%A9%2C%20Czechia&maptype=roadmap"
           title="Venetto Burger na mapě"
           className="absolute inset-0 w-full h-full border-0 grayscale"
           allowFullScreen

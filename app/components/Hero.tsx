@@ -14,11 +14,11 @@ export default function Hero() {
         <motion.div
           className="absolute bottom-0 left-0 right-0 flex items-end justify-center"
           initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 0.07, scale: 1 }}
+          animate={{ opacity: 0.15, scale: 1 }}
           transition={{ duration: 1.4, ease: "easeOut" }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/bydzovzamek.svg" alt="" className="w-full h-auto object-contain" />
+          <img src="/mkkostel.svg" alt="" className="w-1/2 h-auto object-contain invert" />
         </motion.div>
 
 
@@ -32,7 +32,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
           >
-            Novy Bydzov
+            Mestec Kralove
           </motion.p>
 
           {/* Main title — from left, big */}
@@ -50,14 +50,14 @@ export default function Hero() {
           <motion.button
             onClick={() => setShowCall(true)}
             className="mt-2 cursor-pointer"
-            aria-label="Zavolat na číslo 607 741 803"
+            aria-label="Zavolat na číslo 731 041 616"
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.9, ease: "easeOut" }}
             whileHover={{ scale: 1.06 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Image src="/cislo.png" alt="607 741 803" width={200} height={60} className="object-contain" priority />
+            <Image src="/cislo2svg.svg" alt="731 041 616" width={200} height={60} className="object-contain" priority />
           </motion.button>
         </div>
       </section>
@@ -93,10 +93,10 @@ export default function Hero() {
               <div className="flex flex-col items-center gap-5 p-7">
                 <div className="w-10 h-1 rounded-full bg-white/20" />
                 <p className="text-white/50 text-sm uppercase tracking-widest">Kontakt</p>
-                <p className="text-white text-2xl font-semibold tracking-wide">+420 607 741 803</p>
+                <p className="text-white text-2xl font-semibold tracking-wide">+420 731 041 616</p>
 
                 <motion.a
-                  href="tel:+420607741803"
+                  href="tel:+420731041616"
                   className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl text-black font-bold text-lg"
                   style={{ background: "white" }}
                   whileHover={{ scale: 1.03 }}

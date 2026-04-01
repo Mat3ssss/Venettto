@@ -7,7 +7,7 @@ import FadeIn from "./FadeIn";
 const items = [
   { name: "Double Cheese & Bacon", price: "269,-", desc: "bulka | salát | hovězí maso | pepřová mayo | double slanina | double cheddar" },
   { name: "Chilli Burger", price: "259,-", desc: "bulka | hovězí maso | chilli dip | salát | cheddar | jalapeño" },
-  { name: "Blue Cheese Burger", price: "279,-", desc: "bulka | hovězí maso | česnekový dip | slanina | blue cheese | salátek | pražená cibulka" },
+  { name: "Bacon Burger", price: "259,-", desc: "bulka | salát | hovězí maso | pepřový dip | slanina | cibule | rajče | okurka" },
 ];
 
 export default function HotPicks() {

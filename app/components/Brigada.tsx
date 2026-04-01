@@ -73,7 +73,7 @@ export default function Brigada() {
           </div>
           <button onClick={() => setCallModal(true)} className="group flex flex-col gap-1 md:text-right flex-shrink-0 cursor-pointer">
             <span className="text-white/30 text-xs uppercase tracking-widest">Máš zájem? Zavolej</span>
-            <span className="font-black text-3xl group-hover:text-white/50 transition-colors">607 741 803</span>
+            <span className="font-black text-3xl group-hover:text-white/50 transition-colors">731 041 616</span>
           </button>
         </FadeIn>
 

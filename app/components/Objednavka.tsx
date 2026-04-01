@@ -52,7 +52,7 @@ export default function Objednavka() {
           <div className="flex items-center justify-center gap-3 mt-6">
             <div className="h-px w-12 bg-black/10" />
             <button onClick={() => setCallModal(true)} className="font-black text-lg text-black hover:text-black/50 transition-colors cursor-pointer">
-              607 741 803
+              731 041 616
             </button>
             <div className="h-px w-12 bg-black/10" />
           </div>
@@ -77,7 +77,7 @@ export default function Objednavka() {
               </div>
               <div className="flex flex-col gap-2">
                 <label className="text-black/30 text-xs uppercase tracking-[0.2em]">Telefon *</label>
-                <input name="telefon" type="tel" required placeholder="607 741 803" className={inputClass} />
+                <input name="telefon" type="tel" required placeholder="731 041 616" className={inputClass} />
               </div>
             </div>
 

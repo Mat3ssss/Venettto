@@ -17,69 +17,86 @@ const dipIcons: Record<string, ReactNode> = {
 };
 
 const categories = [
+  { id: "pizza", label: "Pizza" },
+  { id: "pizza-special", label: "Pizza Speciál" },
+  { id: "pizza-exclusive", label: "Pizza Exclusive" },
   { id: "burgery", label: "Burgery" },
-  { id: "saláty", label: "Saláty" },
-  { id: "tortily", label: "Tortily" },
   { id: "sides", label: "Přílohy" },
-  { id: "omacky", label: "Omáčky" },
+  { id: "ingredience", label: "Ingredience" },
+  { id: "napoje", label: "Nápoje" },
 ];
 
-type MenuItem = { name: string; desc: string; price: string; color?: string; hot?: boolean; top?: boolean };
+type MenuItem = { name: string; desc: string; price: string; color?: string; hot?: boolean; top?: boolean; photo?: string };
 
 const menuData: Record<string, MenuItem[]> = {
+  pizza: [
+    { name: "Margarita", desc: "tomato | sýr | bazalka", price: "195 Kč", photo: "/pizza.jpg" },
+    { name: "Šunková", desc: "tomato | sýr | šunka", price: "200 Kč", photo: "/pizza.jpg" },
+    { name: "Salámová", desc: "tomato | sýr | salám", price: "200 Kč", photo: "/pizza.jpg" },
+    { name: "Slaninová", desc: "tomato | sýr | slanina | cibule", price: "200 Kč", photo: "/pizza.jpg" },
+    { name: "Hawai", desc: "tomato | sýr | šunka | ananas", price: "200 Kč", photo: "/pizza.jpg" },
+    { name: "Americana", desc: "tomato | sýr | šunka | kukuřice", price: "200 Kč", photo: "/pizza.jpg" },
+    { name: "Sýrová", desc: "smetana | gouda | niva | uzený sýr | parmazán", price: "220 Kč", photo: "/pizza.jpg" },
+    { name: "Tuňáková", desc: "tomato | sýr | tuňák | červená cibule", price: "220 Kč", photo: "/pizza.jpg" },
+    { name: "Olivová", desc: "tomato | sýr | šunka | olivy", price: "200 Kč", photo: "/pizza.jpg" },
+    { name: "Feferone", desc: "tomato | sýr | pikantní salám | feferony | cibule", price: "205 Kč", hot: true, photo: "/pizza.jpg" },
+    { name: "Žampionová", desc: "tomato | sýr | šunka | žampiony", price: "200 Kč", photo: "/pizza.jpg" },
+    { name: "Špenátová", desc: "tomato | sýr | slanina | špenát | česnek", price: "205 Kč", photo: "/pizza.jpg" },
+  ],
+  "pizza-special": [
+    { name: "Pepato", desc: "tomato | sýr | salám | feferonky | cibule | slanina | olivy", price: "230 Kč", hot: true, photo: "/pizza.jpg" },
+    { name: "Polo", desc: "tomato | sýr | kuřecí maso | niva | parmazán", price: "230 Kč", photo: "/pizza.jpg" },
+    { name: "Kuřecí", desc: "smetana | sýr | šunka | kuřecí maso | špenát | česnek", price: "230 Kč", photo: "/pizza.jpg" },
+    { name: "Mexicana", desc: "tomato | sýr | pikantní salám | niva | česnek", price: "230 Kč", hot: true, photo: "/pizza.jpg" },
+    { name: "Jalapeňo", desc: "tomato | sýr | pikantní salám | jalapeňo | parmazán", price: "230 Kč", hot: true, photo: "/pizza.jpg" },
+    { name: "Olomoučíno", desc: "tomato | sýr | olomoucké syrečky | cibule", price: "230 Kč", photo: "/pizza.jpg" },
+    { name: "Brusinková", desc: "smetana | sýr | šunka | hermelín | brusinky", price: "225 Kč", photo: "/pizza.jpg" },
+    { name: "Venetto", desc: "smetana | sýr | šunka | cibule | tuňák", price: "230 Kč", top: true, photo: "/pizza.jpg" },
+    { name: "Italia", desc: "tomato | sýr | salám | žampiony | olivy | čerstvá paprika", price: "230 Kč", photo: "/pizza.jpg" },
+  ],
+  "pizza-exclusive": [
+    { name: "Carbonara", desc: "smetana | slanina | cibule | vejce | sýr", price: "235 Kč", photo: "/pizza.jpg" },
+    { name: "Gulia", desc: "tomato | šunka | slanina | salám | niva | česnek | oregano | sýr", price: "240 Kč", photo: "/pizza.jpg" },
+    { name: "Curry", desc: "smetana | šunka | pórek | kuřecí maso | kari | sýr", price: "235 Kč", photo: "/pizza.jpg" },
+    { name: "Prosciutto", desc: "tomato | sýr | cherry rajčata | prosciutto | parmazán", price: "235 Kč", photo: "/pizza.jpg" },
+  ],
+  ingredience: [
+    { name: "Ingredience", desc: "sýr | maso | salám | šunka | slanina | niva | olomoucké syrečky | parma | tuňák | hermelín | vejce", price: "+45 Kč", color: "#1a1a1a" },
+    { name: "Ingredience", desc: "kukuřice | špenát | cibule | olivy | žampiony | česnek | feferonky | ananas | jalapeňo", price: "+30 Kč", color: "#1a1a1a" },
+    { name: "Krabice na pizzu", desc: "", price: "15 Kč", color: "#1a1a1a" },
+    { name: "Půlená pizza", desc: "", price: "20 Kč", color: "#1a1a1a" },
+    { name: "Změna základu na smetanový", desc: "", price: "10 Kč", color: "#1a1a1a" },
+  ],
   burgery: [
-    { name: "Classic Burger", desc: "bulka | salát | hovězí maso | hořčice | kečup | okurka | rajče | cheddar", price: "185 / 255 Kč" },
-    { name: "Bacon Burger", desc: "bulka | salát | hovězí maso | pepper mayo | slanina | cibule | okurka | rajče", price: "189 / 259 Kč" },
-    { name: "Chilli Burger", desc: "bulka | hovězí maso | chilli dip | salát | cheddar | jalapeño", price: "189 / 259 Kč", hot: true },
-    { name: "Cheese Burger", desc: "bulka | hovězí maso | dip | salát | rajče | okurka | cheddar", price: "189 / 259 Kč" },
-    { name: "BBQ Burger", desc: "bulka | salát | hovězí maso | BBQ dresing | cibule | okurka | rajče | cheddar", price: "189 / 259 Kč" },
-    { name: "Double Cheese & Bacon", desc: "bulka | salát | hovězí maso | pepřová mayo | double slanina | double cheddar", price: "199 / 269 Kč", top: true },
-    { name: "MM Burger", desc: "bulka | smash maso | ledový salát | sweet hot dip | 2× cheddar | pražená cíba", price: "230 / 300 Kč" },
-    { name: "Grand Burger", desc: "bulka | smash maso | ledový salát | mayo | BBQ dip | slanina | rajče | cibule", price: "235 / 305 Kč" },
-    { name: "Chipotle Burger", desc: "bulka | salát | hovězí maso | chipotle | okurka | slanina | cheddar", price: "199 / 269 Kč" },
-    { name: "Big Burger (400g)", desc: "bulka | dvojité hovězí maso | BBQ dip | dvojitý cheddar | okurka", price: "265 / 335 Kč" },
-    { name: "Fat Boy", desc: "bulka | mayo | salát | hovězí maso | grilovaný hermelín obalený ve slanině | brusinky", price: "255 / 325 Kč" },
-    { name: "Rings Burger", desc: "bulka | salát | hovězí maso | pepper mayo | cheddar | cibulové kroužky", price: "199 / 269 Kč" },
-    { name: "Cheese King", desc: "bulka | hovězí maso | majonéza | rajče | salát | smažený sýr", price: "235 / 305 Kč" },
-    { name: "Smažák", desc: "bulka | salát | smažený sýr | majonéza | rajče", price: "189 / 259 Kč" },
-    { name: "Ogar Burger", desc: "bulka | hovězí maso | cibule | domácí tatarák ze syrečků | česnekové mayo", price: "199 / 269 Kč" },
-    { name: "American Burger", desc: "bulka | hranolky | dip | hovězí maso | cheddar | slanina", price: "199 / 269 Kč" },
-    { name: "Blue Cheese Burger", desc: "bulka | hovězí maso | česnekový dip | slanina | blue cheese | salátek | pražená cibulka", price: "209 / 279 Kč" },
+    { name: "Classic", desc: "bulka | salát | hovězí maso | hořčice | kečup | okurka | rajče | cheddar", price: "185 / 255 Kč" },
+    { name: "Bacon", desc: "bulka | salát | hovězí maso | pepřový dip | slanina | cibule | rajče | okurka", price: "189 / 259 Kč" },
+    { name: "Cheese", desc: "bulka | hovězí maso | dip | salát | rajče | okurka | cheddar", price: "189 / 259 Kč" },
+    { name: "Chilli", desc: "bulka | salát | hovězí maso | jalapeňo papričky | dip | cheddar", price: "189 / 259 Kč", hot: true },
+    { name: "BBQ", desc: "bulka | salát | hovězí maso | rajče | okurka | cibule | BBQ dip | cheddar", price: "189 / 259 Kč" },
+    { name: "Double Cheese & Bacon", desc: "bulka | hovězí maso | salát | dvojitá slanina | dvojitý cheddar", price: "199 / 269 Kč", top: true },
+    { name: "Chipotle", desc: "bulka | hovězí maso | slanina | cheddar | chipotle dip", price: "199 / 269 Kč" },
     { name: "Chicken Burger", desc: "bulka | kuřecí maso | salát | slanina | rajče | okurka | dip", price: "189 / 259 Kč" },
-    { name: "Pulled Pork Burger", desc: "bulka | coleslaw | mayo | trhané vepřové maso", price: "199 / 269 Kč" },
-  ],
-  "saláty": [
-    { name: "Salát s kuřecím masem", desc: "ledový salát | bylinkový dresink | slanina | 2× kuřecí strips | opečený chléb", price: "179 Kč" },
-  ],
-  tortily: [
-    { name: "Chicken Wrap", desc: "tortilla | kuřecí stripsy | slanina | hranolky | BBQ | sýr", price: "179 / 249 Kč" },
-    { name: "Chilli Tortilla", desc: "salát | hovězí maso | jalapeňo | dip | cheddar", price: "189 / 259 Kč", hot: true },
-    { name: "Bacon Tortilla", desc: "salát | hovězí maso | cibule | rajče | okurka | slanina | dip", price: "189 / 259 Kč" },
-    { name: "Double Cheese Tortilla", desc: "salát | hovězí maso | dip | dvojitá slanina | dvojitý cheddar", price: "199 / 269 Kč" },
-    { name: "Blue Tortilla", desc: "salát | hovězí maso | blue cheese | dip | cibulka | slanina", price: "209 / 279 Kč" },
-    { name: "Pulled Pork Tortilla", desc: "trhané vepřové maso | cibulka | cheddar | salát", price: "189 / 259 Kč" },
+    { name: "Chicken Strips", desc: "6 ks + 2× dip", price: "199 / 269 Kč" },
+    { name: "BBQ Hot Wings", desc: "7 ks kuřecích křidýlek v křupavé krustě | BBQ dip", price: "199 / 269 Kč" },
   ],
   sides: [
-    { name: "Hrancle s trhaným masem", desc: "hranolky | trhané vepřové maso | okurka | cibule | cheddarová omáčka (možné i ve spicy verzi)", price: "199 Kč" },
-    { name: "Hrancle se slaninou a cheddarem", desc: "", price: "139 Kč" },
-    { name: "Hrancle", desc: "", price: "59 Kč" },
+    { name: "Hranolky", desc: "", price: "59 Kč" },
+    { name: "Cibulové kroužky", desc: "", price: "69 Kč" },
     { name: "Cheddarové uhlí (5 ks)", desc: "", price: "75 Kč" },
-    { name: "Cibuláky (8 ks)", desc: "", price: "69 Kč" },
-    { name: "BBQ Hot Wings", desc: "7 ks pikantních křidýlek v kukuřičné krustě", price: "199 / 269 Kč" },
-    { name: "Chicken Strips", desc: "6 ks + 2× dip", price: "199 / 269 Kč" },
   ],
-  omacky: [
-    { name: "Kečup", desc: "", price: "20 Kč", color: "#c0392b" },
-    { name: "Hořčice", desc: "", price: "20 Kč", color: "#e6b800" },
-    { name: "Chilli dip", desc: "", price: "25 Kč", color: "#e84118", hot: true },
-    { name: "BBQ dip", desc: "", price: "25 Kč", color: "#6b3a1f" },
-    { name: "Pepřový dip", desc: "", price: "25 Kč", color: "#444" },
-    { name: "Mayo", desc: "", price: "20 Kč", color: "#f5e6c8" },
+  napoje: [
+    { name: "Fanta", desc: "", price: "40 Kč", color: "#e65c00" },
+    { name: "Sprite", desc: "", price: "40 Kč", color: "#1a7a1a" },
+    { name: "Coca-Cola", desc: "", price: "40 Kč", color: "#8b0000" },
+    { name: "Pepsi", desc: "", price: "30 Kč", color: "#00308f" },
+    { name: "Mirinda", desc: "", price: "30 Kč", color: "#7b2d8b" },
+    { name: "Birell", desc: "", price: "30 Kč", color: "#4a7c1f" },
+    { name: "Pivo 0,5 l", desc: "dle nabídky", price: "30 Kč", color: "#8b6914" },
   ],
 };
 
 export default function Menu() {
-  const [active, setActive] = useState("burgery");
+  const [active, setActive] = useState("pizza");
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
   const burgirY = useTransform(scrollYProgress, [0, 1], [80, -80]);
@@ -111,7 +128,7 @@ export default function Menu() {
 
         {/* Note */}
         <FadeIn delay={0.15}>
-          <p className="text-center text-white/50 text-sm mb-8 uppercase tracking-widest">Menu +70 Kč</p>
+          <p className="text-center text-white/50 text-sm mb-8 uppercase tracking-widest">Burgery: single / menu +70 Kč</p>
         </FadeIn>
 
         {/* Category tabs */}
@@ -154,7 +171,7 @@ export default function Menu() {
         <AnimatePresence mode="wait">
           <motion.div
             key={active}
-            className={`grid grid-cols-1 sm:grid-cols-2 gap-6 ${active === "omacky" ? "max-w-md mx-auto" : ""}`}
+            className={`grid grid-cols-1 sm:grid-cols-2 gap-6 ${active === "napoje" || active === "ingredience" ? "max-w-md mx-auto" : ""}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -162,7 +179,7 @@ export default function Menu() {
           >
             {items.map((item, i) => (
               <motion.div
-                key={item.name}
+                key={item.name + i}
                 className="flex gap-4 items-start group"
                 initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -172,7 +189,7 @@ export default function Menu() {
                 {item.color ? (
                   <div
                     className="w-28 h-28 flex-shrink-0 rounded-xl flex items-center justify-center overflow-hidden relative"
-                    style={{ background: item.color }}
+                    style={{ background: item.color, border: "1px solid rgba(255,255,255,0.08)" }}
                   >
                     <div className="absolute w-20 h-20 rounded-full blur-xl animate-pulse-blob" style={{ background: "white" }} />
                     {item.hot
@@ -187,7 +204,7 @@ export default function Menu() {
                 ) : (
                   <div className="flex-shrink-0 relative" style={{ width: 112, height: 112 }}>
                     <div className="absolute inset-0 rounded overflow-hidden">
-                      <Image src="/burger.png" alt={item.name} fill sizes="112px" className="object-cover" />
+                      <Image src={item.photo ?? "/burger.png"} alt={item.name} fill sizes="112px" className="object-cover" />
                       {item.hot && (
                         /* eslint-disable-next-line @next/next/no-img-element */
                         <img
@@ -217,7 +234,7 @@ export default function Menu() {
                   </div>
                 )}
                 {/* Info */}
-                <div className="flex flex-col justify-between h-28">
+                <div className="flex flex-col justify-between min-h-28">
                   <div>
                     <p className="text-white font-black uppercase text-sm tracking-wide">{item.name}</p>
                     {item.desc && <p className="text-white/50 text-xs mt-1">{item.desc}</p>}
@@ -233,8 +250,8 @@ export default function Menu() {
         {/* Footnote */}
         <FadeIn delay={0.2} className="mt-12">
           <p className="text-center text-white/30 text-xs leading-relaxed">
-            Cena včetně obalového materiálu &nbsp;·&nbsp; cena single / menu<br />
-            *menu – majonéza, hranolky, nápoj, burger
+            Pizza Ø40 cm &nbsp;·&nbsp; Cena včetně obalového materiálu<br />
+            Burgery: single / menu (hranolky + nápoj)
           </p>
         </FadeIn>
       </div>

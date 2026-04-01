@@ -11,7 +11,7 @@ export default function CallModal({ onClose }: { onClose: () => void }) {
         onClick={(e) => e.stopPropagation()}
       >
         <p className="text-white/40 text-xs uppercase tracking-widest">Zavolat</p>
-        <p className="font-black text-white text-3xl tracking-tight">607 741 803</p>
+        <p className="font-black text-white text-3xl tracking-tight">731 041 616</p>
         <div className="flex gap-3 w-full mt-2">
           <button
             onClick={onClose}
@@ -20,7 +20,7 @@ export default function CallModal({ onClose }: { onClose: () => void }) {
             Zrušit
           </button>
           <a
-            href="tel:+420607741803"
+            href="tel:+420731041616"
             className="flex-1 bg-white text-black font-black uppercase text-xs tracking-widest py-3 text-center hover:bg-white/80 transition-colors"
           >
             Zavolat

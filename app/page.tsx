@@ -8,6 +8,7 @@ import Recenze from "./components/Recenze";
 import Gallery from "./components/Gallery";
 import Brigada from "./components/Brigada";
 import Kontakt from "./components/Kontakt";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Objednavka />
       <Brigada />
       <Kontakt />
+      <Footer />
     </main>
   );
 }
