@@ -33,7 +33,7 @@ export default function Kontakt() {
 
           {/* Otevírací doba */}
           <FadeIn direction="left" className="flex-1">
-            <h2 className="font-black uppercase text-lg tracking-widest mb-6 text-black">Otevírací doba</h2>
+            <h2 className="font-black uppercase text-2xl tracking-widest mb-6 text-black">Otevírací doba</h2>
             <div className="flex flex-col gap-2">
               {hodiny.map(({ den, cas }) => (
                 <div key={den} className="flex justify-between gap-8 text-sm border-b border-black/10 pb-2">
@@ -47,7 +47,7 @@ export default function Kontakt() {
 
           {/* Adresa */}
           <FadeIn direction="up" className="flex-1">
-            <h2 className="font-black uppercase text-lg tracking-widest mb-6 text-black">Adresa</h2>
+            <h2 className="font-black uppercase text-2xl tracking-widest mb-6 text-black">Adresa</h2>
             <p className="text-black/70 text-sm leading-relaxed">
               T. G. Masaryka 177<br />
               Městec Králové<br />

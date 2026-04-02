@@ -9,7 +9,7 @@ export default function Hero() {
 
   return (
     <>
-      <section id="domu" className="relative flex flex-col items-center justify-start pt-20 min-h-[75vh] md:justify-center md:pt-0 md:min-h-screen overflow-hidden" aria-label="Venetto Burger úvod">
+      <section id="domu" className="relative flex flex-col items-center justify-start pt-20 min-h-screen md:justify-center md:pt-0 overflow-hidden" aria-label="Venetto Burger úvod">
         {/* Zámek background — bottom aligned */}
         <motion.div
           className="absolute bottom-0 left-0 right-0 flex items-end justify-center"

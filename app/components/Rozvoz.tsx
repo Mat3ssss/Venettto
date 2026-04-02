@@ -17,7 +17,7 @@ export default function Rozvoz() {
           src="/skutrskutrskutr.svg"
           alt=""
           aria-hidden="true"
-          className="absolute bottom-0 right-4 w-96 opacity-30 pointer-events-none select-none"
+          className="absolute bottom-0 right-4 w-52 md:w-96 opacity-30 pointer-events-none select-none"
           initial={{ x: "-120%", rotate: -5 }}
           animate={inView ? { x: 0, rotate: 0 } : { x: "-120%", rotate: -5 }}
           transition={{
