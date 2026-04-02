@@ -24,30 +24,14 @@ export default function Objednavka() {
         {/* Centered heading */}
         <div className="text-center mb-7">
           <p className="text-black/30 text-xs uppercase tracking-[0.3em] mb-4">— Kontaktujte nás</p>
-          <h2 className="font-black uppercase text-black leading-[0.88] text-4xl md:text-5xl lg:text-6xl mb-4">
-            Větší <span className="circle-word relative inline-block cursor-default">
-              objednávka
-              <svg
-                viewBox="0 0 340 80"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="absolute -inset-x-4 -inset-y-2 w-[calc(100%+2rem)] h-[calc(100%+1rem)] pointer-events-none"
-                aria-hidden="true"
-              >
-                <style>{`.circle-path{stroke-dasharray:800;stroke-dashoffset:800}`}</style>
-                <ellipse
-                  className="circle-path"
-                  cx="170" cy="40" rx="165" ry="36"
-                  stroke="black" strokeWidth="3"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>
-            <br />
-            <span className="text-black/25" style={{ fontFamily: "var(--font-dripping-marker)", letterSpacing: "0.1em" }}>/ Dotaz</span>
+          <h2 className="font-black uppercase text-black leading-[0.88] text-4xl md:text-5xl lg:text-6xl mb-2">
+            Dotaz
           </h2>
-          <p className="text-black/40 text-sm max-w-sm mx-auto leading-relaxed mt-4">
-            Plánujete firemní akci, narozeniny nebo máte dotaz? Napište nám.
+          <div className="text-3xl md:text-4xl lg:text-5xl text-black/30 mb-4" style={{ fontFamily: "var(--font-dripping-marker)", letterSpacing: "0.05em" }}>
+            / Reklamace
+          </div>
+          <p className="text-black/40 text-sm max-w-sm mx-auto leading-relaxed mt-2">
+            Máte dotaz nebo problém s objednávkou? Napište nám.
           </p>
           <div className="flex items-center justify-center gap-3 mt-6">
             <div className="h-px w-12 bg-black/10" />
@@ -87,32 +71,12 @@ export default function Objednavka() {
             </div>
 
             <div className="flex flex-col gap-2">
-              <label className="text-black/30 text-xs uppercase tracking-[0.2em]">Adresa</label>
-              <input name="adresa" type="text" placeholder="Ulice 123, město" className={inputClass} />
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-              <div className="flex flex-col gap-2">
-                <label className="text-black/30 text-xs uppercase tracking-[0.2em]">Datum</label>
-                <input name="datum" type="text" placeholder="DD.MM.RRRR" className={inputClass} />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label className="text-black/30 text-xs uppercase tracking-[0.2em]">Čas</label>
-                <input name="cas" type="text" placeholder="HH:MM" className={inputClass} />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label className="text-black/30 text-xs uppercase tracking-[0.2em]">Počet osob</label>
-                <input name="pocetOsob" type="number" min="1" placeholder="20" className={inputClass} />
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-2">
               <label className="text-black/30 text-xs uppercase tracking-[0.2em]">Zpráva *</label>
               <textarea
                 name="poznamka"
                 required
                 rows={3}
-                placeholder="Popište vaši objednávku, preference, alergeny..."
+                placeholder="Napište váš dotaz nebo popište problém s objednávkou..."
                 className={`${inputClass} resize-none`}
               />
             </div>
