@@ -39,7 +39,7 @@ function MarqueeRow({ items, reverse = false }: { items: typeof topImages; rever
         }}
       >
         {doubled.map((item, i) => (
-          <div key={i} className="w-[420px] h-72 flex-shrink-0 relative overflow-hidden">
+          <div key={i} className="w-[260px] h-48 md:w-[420px] md:h-72 flex-shrink-0 relative overflow-hidden">
             <Image
               src={item.src}
               alt={item.alt}
