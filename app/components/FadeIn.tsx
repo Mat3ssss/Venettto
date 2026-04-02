@@ -21,6 +21,8 @@ const offsets: Record<Direction, { x?: number; y?: number }> = {
   right: { x: 64 },
 };
 
+const supportsIO = typeof window !== "undefined" && typeof window.IntersectionObserver !== "undefined";
+
 export default function FadeIn({
   children,
   direction = "up",
@@ -30,16 +32,17 @@ export default function FadeIn({
   once = true,
 }: FadeInProps) {
   const ref = useRef(null);
-  const inView = useInView(ref, { once, margin: "-80px 0px" });
+  const inView = useInView(ref, { once, margin: "0px" });
 
   const { x = 0, y = 0 } = offsets[direction];
+  const visible = !supportsIO || inView;
 
   return (
     <motion.div
       ref={ref}
       className={className}
       initial={{ opacity: 0, x, y }}
-      animate={inView ? { opacity: 1, x: 0, y: 0 } : {}}
+      animate={visible ? { opacity: 1, x: 0, y: 0 } : {}}
       transition={{ duration, delay, ease: [0.25, 0.1, 0.25, 1] }}
     >
       {children}
