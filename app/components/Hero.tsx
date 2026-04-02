@@ -9,7 +9,7 @@ export default function Hero() {
 
   return (
     <>
-      <section id="domu" className="relative flex-1 flex flex-col items-center justify-center min-h-screen overflow-hidden" aria-label="Venetto Burger úvod">
+      <section id="domu" className="relative flex flex-col items-center justify-start pt-20 min-h-[75vh] md:justify-center md:pt-0 md:min-h-screen overflow-hidden" aria-label="Venetto Burger úvod">
         {/* Zámek background — bottom aligned */}
         <motion.div
           className="absolute bottom-0 left-0 right-0 flex items-end justify-center"
@@ -26,7 +26,7 @@ export default function Hero() {
         <div className="relative z-10 flex flex-col items-center gap-6 text-center px-4">
           {/* Subtitle — from top */}
           <motion.p
-            className="uppercase tracking-[0.4em] text-white text-2xl font-medium"
+            className="uppercase tracking-[0.4em] text-white text-lg md:text-2xl font-medium"
             style={{ fontFamily: "var(--font-dripping-marker)" }}
             initial={{ opacity: 0, y: -32 }}
             animate={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ export default function Hero() {
 
           {/* Main title — from left, big */}
           <motion.h1
-            className="text-[5rem] md:text-[12rem] leading-none text-white uppercase"
+            className="text-[6.5rem] md:text-[12rem] leading-none text-white uppercase"
             style={{ fontFamily: "var(--font-dripping-marker)" }}
             initial={{ opacity: 0, x: -80 }}
             animate={{ opacity: 1, x: 0 }}

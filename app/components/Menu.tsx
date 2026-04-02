@@ -88,10 +88,9 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Fanta", desc: "", price: "40 Kč", color: "#e65c00" },
     { name: "Sprite", desc: "", price: "40 Kč", color: "#1a7a1a" },
     { name: "Coca-Cola", desc: "", price: "40 Kč", color: "#8b0000" },
-    { name: "Pepsi", desc: "", price: "30 Kč", color: "#00308f" },
-    { name: "Mirinda", desc: "", price: "30 Kč", color: "#7b2d8b" },
-    { name: "Birell", desc: "", price: "30 Kč", color: "#4a7c1f" },
-    { name: "Pivo 0,5 l", desc: "dle nabídky", price: "30 Kč", color: "#8b6914" },
+    { name: "Pepsi", desc: "", price: "40 Kč", color: "#00308f" },
+    { name: "Mirinda", desc: "", price: "40 Kč", color: "#7b2d8b" },
+    { name: "Pivo 0,5 l", desc: "dle nabídky", price: "50 Kč", color: "#8b6914" },
   ],
 };
 
@@ -250,8 +249,8 @@ export default function Menu() {
         {/* Footnote */}
         <FadeIn delay={0.2} className="mt-12">
           <p className="text-center text-white/30 text-xs leading-relaxed">
-            Pizza Ø40 cm &nbsp;·&nbsp; Cena včetně obalového materiálu<br />
-            Burgery: single / menu (hranolky + nápoj)
+            Pizza Ø40 cm &nbsp;·&nbsp; Krabice + 15 Kč<br />
+            Burgery: single / menu (hranolky + nápoj) &nbsp;·&nbsp; Cena včetně obalového materiálu
           </p>
         </FadeIn>
       </div>
