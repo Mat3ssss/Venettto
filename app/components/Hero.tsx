@@ -36,13 +36,15 @@ export default function Hero() {
           </motion.p>
 
           {/* Main title — from left, big */}
-          <motion.div
+          <motion.h1
+            className="text-[6.5rem] md:text-[12rem] leading-none text-white uppercase"
+            style={{ fontFamily: "var(--font-dripping-marker)" }}
             initial={{ opacity: 0, x: -80 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <Image src="/napisvnt.svg" alt="Venetto" width={700} height={200} className="object-contain w-[18rem] sm:w-[24rem] md:w-[34rem] lg:w-[42rem] xl:w-[48rem]" priority unoptimized />
-          </motion.div>
+            Venetto
+          </motion.h1>
 
           {/* Phone CTA — fade up */}
           <motion.button
