@@ -6,7 +6,7 @@ import FadeIn from "./FadeIn";
 import CallModal from "./CallModal";
 
 const pozice = [
-  { target: 1, title: "Rozvoz jídel", note: "ŘP sk. B výhodou" },
+  { target: 1, title: "Rozvoz jídel", note: "ŘP sk. B" },
   { target: 2, title: "Výpomoc v kuchyni", note: "" },
   { target: 3, title: "Pizzař", note: "" },
   { target: 4, title: "Grill", note: "burgery, tortilly apod." },
