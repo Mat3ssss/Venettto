@@ -41,7 +41,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <Image src="/napisvnt.svg" alt="Venetto" width={700} height={200} className="object-contain w-[18rem] sm:w-[24rem] md:w-[34rem] lg:w-[42rem] xl:w-[48rem]" priority />
+            <Image src="/napisvnt.svg" alt="Venetto" width={700} height={200} className="object-contain w-[18rem] sm:w-[24rem] md:w-[34rem] lg:w-[42rem] xl:w-[48rem]" priority unoptimized />
           </motion.div>
 
           {/* Phone CTA — fade up */}
