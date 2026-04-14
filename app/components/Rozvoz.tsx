@@ -29,7 +29,7 @@ export default function Rozvoz() {
           }}
         />
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/rozvoz.svg" alt="Rozvoz" className="max-h-36 w-auto relative z-10" />
+        <img src="/rozvoz.svg" alt="Rozvoz" className="max-h-36 w-auto self-start relative z-10" />
         <p className="text-black font-black text-4xl tracking-tight relative z-10">731 041 616</p>
         <div className="flex flex-col sm:flex-row gap-10 relative z-10">
           <div>

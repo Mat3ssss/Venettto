@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import FadeIn from "./FadeIn";
 
 const items = [
-  { name: "Double Cheese & Bacon", price: "269,-", desc: "bulka | salát | hovězí maso | pepřová mayo | double slanina | double cheddar" },
-  { name: "Chilli Burger", price: "259,-", desc: "bulka | hovězí maso | chilli dip | salát | cheddar | jalapeño" },
-  { name: "Bacon Burger", price: "259,-", desc: "bulka | salát | hovězí maso | pepřový dip | slanina | cibule | rajče | okurka" },
+  { name: "Double Cheese & Bacon", price: "269,-", desc: "bulka | salát | hovězí maso | pepřová mayo | double slanina | double cheddar", img: "/hotpicture.png" },
+  { name: "Kuřecí Pizza", price: "230,-", desc: "smetana | sýr | šunka | kuřecí maso | špenát | česnek", img: "/kure.jpeg" },
+  { name: "Bacon Burger", price: "259,-", desc: "bulka | salát | hovězí maso | pepřový dip | slanina | cibule | rajče | okurka", img: "/hotpicture.png" },
 ];
 
 export default function HotPicks() {
@@ -34,12 +34,12 @@ export default function HotPicks() {
           >
             {/* Photo */}
             <div className="relative w-28 h-28 sm:w-full sm:h-auto flex-shrink-0 overflow-hidden sm:[aspect-ratio:968/1256]">
-              <Image src="/hotpicture.png" alt={item.name} fill sizes="(max-width: 640px) 112px, 33vw" className="object-cover" />
+              <Image src={item.img} alt={item.name} fill sizes="(max-width: 640px) 112px, 33vw" className="object-cover" />
             </div>
 
             {/* Info */}
             <div className="flex flex-col justify-center sm:block">
-              <span className="font-black uppercase text-base sm:text-xl leading-tight">{item.name}</span>
+              <span className="block font-black uppercase text-base sm:text-xl leading-tight sm:min-h-[3.5rem]">{item.name}</span>
               <span className="block text-3xl sm:text-5xl leading-none mt-0.5" style={{ fontFamily: "var(--font-dripping-marker)" }}>{item.price}</span>
               <p className="text-xs sm:text-sm text-black/60 mt-1">{item.desc}</p>
             </div>
