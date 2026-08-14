@@ -78,7 +78,6 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Chicken Burger", desc: "bulka | kuřecí maso | salát | slanina | rajče | okurka | dip", price: "189 / 259 Kč" },
     { name: "Chicken Strips", desc: "6 ks + 2× dip", price: "199 / 269 Kč" },
     { name: "BBQ Hot Wings", desc: "7 ks kuřecích křidýlek v křupavé krustě | BBQ dip", price: "199 / 269 Kč" },
-    { name: "Slider", desc: "speciální bulka | 80 g masa | kečup | hořčice | cibule | okurka", price: "129 Kč" },
   ],
   sides: [
     { name: "Hranolky", desc: "", price: "59 Kč" },
