@@ -45,12 +45,12 @@ const menuData: Record<string, MenuItem[]> = {
   ],
   "pizza-special": [
     { name: "Pepato", desc: "tomato | sýr | salám | feferonky | cibule | slanina | olivy", price: "240 Kč", hot: true, photo: "/pizza.jpg" },
-    { name: "Polo", desc: "tomato | sýr | kuřecí maso | niva | parmazán", price: "240 Kč", photo: "/pizza.jpg" },
+    { name: "Polo", desc: "tomato | sýr | kuřecí maso | niva", price: "240 Kč", photo: "/pizza.jpg" },
     { name: "Kuřecí", desc: "smetana | sýr | šunka | kuřecí maso | špenát | česnek", price: "240 Kč", photo: "/pizza.jpg" },
     { name: "Mexicana", desc: "tomato | sýr | pikantní salám | niva | česnek", price: "240 Kč", hot: true, photo: "/pizza.jpg" },
     { name: "Jalapeňo", desc: "tomato | sýr | pikantní salám | jalapeňo", price: "240 Kč", hot: true, photo: "/pizza.jpg" },
     { name: "Olomoučíno", desc: "tomato | sýr | olomoucké syrečky | cibule", price: "240 Kč", photo: "/pizza.jpg" },
-    { name: "Brusinková", desc: "smetana | sýr | šunka | hermelín | brusinky", price: "235 Kč", photo: "/pizza.jpg" },
+    { name: "Brusinková", desc: "smetana | sýr | šunka | camembert | brusinky", price: "235 Kč", photo: "/pizza.jpg" },
     { name: "Venetto", desc: "smetana | sýr | šunka | cibule | tuňák", price: "240 Kč", top: true, photo: "/pizza.jpg" },
     { name: "Italia", desc: "tomato | sýr | salám | žampiony | olivy | čerstvá paprika", price: "240 Kč", photo: "/pizza.jpg" },
   ],
@@ -58,7 +58,7 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Carbonara", desc: "smetana | slanina | cibule | vejce | sýr", price: "245 Kč", photo: "/pizza.jpg" },
     { name: "Gulia", desc: "tomato | šunka | slanina | salám | niva | česnek | oregano | sýr", price: "250 Kč", photo: "/pizza.jpg" },
     { name: "Curry", desc: "smetana | šunka | pórek | kuřecí maso | kari | sýr", price: "245 Kč", photo: "/pizza.jpg" },
-    { name: "Prosciutto", desc: "tomato | sýr | cherry rajčata | prosciutto | parmazán", price: "245 Kč", photo: "/pizza.jpg" },
+    { name: "Prosciutto", desc: "tomato | sýr | cherry rajčata | prosciutto", price: "245 Kč", photo: "/pizza.jpg" },
   ],
   ingredience: [
     { name: "Ingredience", desc: "sýr | maso | salám | šunka | slanina | niva | olomoucké syrečky | parma | tuňák | hermelín | vejce", price: "+45 Kč", color: "#1a1a1a" },
